@@ -1,0 +1,14 @@
+Compare the Java and Scala programming languages
+
+1.  Scala is a pure object oriented programming language as every value in Scala is an object.
+    Java is not a pure object oriented programming language as it uses primitive data types.
+
+2.  Scala is a statically typed language which does type checking at compile time.
+    Java is a dynamically typed language which does type checking at run time.
+    Java can be compiled even with errors but Scala cannot be compiled until errors are fixed.
+
+3.  Scala supports operator overloading and Java does not.
+
+4.  Scala variables are by default immutable and Java variables are by default mutable.
+
+5. Scala code are less readable due to nested functions and Java codes are more readable.
