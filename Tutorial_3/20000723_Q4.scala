@@ -10,8 +10,8 @@ object Q4 extends App {
     def ship_cost (n_books : Int) : Double = n_books <= 50 match {
         //Using a match case to define the shipping cost based on no of copies    
 
-        case true => n_books * 3
-        case false => (n_books - 50) * 0.75 + 150
+        case true => 3
+        case false => (n_books - 50) * 0.75 + 3
 
     }
 
