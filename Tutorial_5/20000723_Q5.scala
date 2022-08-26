@@ -15,6 +15,6 @@ object Q5 extends App {
     println ("\nEnter the number: ")
     var n= scala.io.StdIn.readInt ()
 
-    println ("\nAddition of even no.s = " + addEven (n) + "\n")
+    println ("\nAddition of even no.s = " + addEven (n - 1) + "\n")
 
 }
