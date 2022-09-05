@@ -8,7 +8,7 @@ object CCipher extends App {
 	//Getting user input for the no of shifts and processing it
 	val shift = (scala.io.StdIn.readLine ("\nPlease enter the no. of shifts: ").toInt + a.size) % a.size
 
-	//Getting user input for the text to be ecrypted or decrypted
+	//Getting user input for the text to be encrypted or decrypted
 	val text = scala.io.StdIn.readLine ("\nMessage to be encrypted or decrypted: ")
 
 	//Encrypting or decrypting data by passing the text through a map
