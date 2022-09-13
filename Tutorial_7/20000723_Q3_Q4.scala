@@ -4,7 +4,7 @@
 object Q3_Q4 extends App {
 
     //Creating Account class
-    class Account (nic : String, val accId : Int, var balance : Double = 0.0) {
+    class Account (val accId : Int, var balance : Double = 0.0) {
 
         //Withdrawing money
         def withdraw (amount : Double) : Unit = {
@@ -26,7 +26,7 @@ object Q3_Q4 extends App {
             }
         }
 
-        override def toString = "[" + nic + " : " + accId + " : " + balance +"]"
+        override def toString = "[" + accId + " : " + balance +"]"
 
     }
 
@@ -34,8 +34,8 @@ object Q3_Q4 extends App {
     var accountList:List [Account] = List ()
 
     //Creating new accounts
-    def accCreate (nic : String, accId :  Int) : Unit = {
-        val acc = new Account (nic, accId)
+    def accCreate (accId :  Int) : Unit = {
+        val acc = new Account (accId)
         accountList = accountList ::: acc :: Nil  
     }
 
@@ -58,12 +58,12 @@ object Q3_Q4 extends App {
     //*********************************//
 
     //Creating new accounts and depositing money in them
-    accCreate ("200012345678", 1001)
+    accCreate (1001)
     find (1001, accountList)(0).deposit(1000)
 
-    accCreate ("199912345678", 1002)
+    accCreate (1002)
 
-    accCreate ("199812345678", 1003)
+    accCreate (1003)
     find (1003, accountList)(0).deposit(-100.0)
 
     //Transfering money
@@ -81,7 +81,6 @@ object Q3_Q4 extends App {
     println ("\nSum of total balances : " + totalBalance(accountList))
 
     //Final balances of all accounts after adding interest
-    println ("\nFinal balances with interest" + postinterest(accountList) + "\n")
+    println ("\nFinal balances with interest : " + postinterest(accountList) + "\n")
 
 }
-
